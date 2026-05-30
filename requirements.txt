@@ -7,10 +7,7 @@ Pillow
 torch
 torchvision
 easyocr
-deep-sort-realtime
 plotly
-fastapi
-uvicorn
 fpdf2
 openpyxl
 requests
@@ -20,14 +17,6 @@ pyyaml
 matplotlib
 seaborn
 python-dotenv
-lap
-scikit-image
-scikit-learn
+gdown
 tqdm
 psutil
-py-cpuinfo
-huggingface_hub
-gitpython
-pyserial
-sqlite-utils
-gdown
