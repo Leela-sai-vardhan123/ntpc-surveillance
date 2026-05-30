@@ -1,34 +1,33 @@
-# ── AI Smart Traffic Monitor — Dependencies ───────────────────────────────────
-
-# Core CV & AI
-ultralytics>=8.2.0
-easyocr>=1.7.1
-opencv-python>=4.9.0
-torch>=2.2.0
-torchvision>=0.17.0
-
-# Tracking
-deep-sort-realtime>=1.3.2
-
-# API
-fastapi>=0.111.0
-uvicorn[standard]>=0.29.0
-pydantic>=2.7.0
-
-# Dashboard
-streamlit>=1.35.0
-plotly>=5.22.0
-
-# Data
-numpy>=1.26.0
-pandas>=2.2.0
-Pillow>=10.3.0
-
-# Linting (dev)
-flake8>=7.0.0
-black>=24.0.0
-isort>=5.13.0
-fpdf2>=2.7.0
-openpyxl>=3.1.0
-requests>=2.31.0
-Pillow>=10.0.0
+streamlit
+ultralytics
+opencv-python-headless
+numpy
+pandas
+Pillow
+torch
+torchvision
+easyocr
+deep-sort-realtime
+plotly
+fastapi
+uvicorn
+fpdf2
+openpyxl
+requests
+scipy
+filterpy
+pyyaml
+matplotlib
+seaborn
+python-dotenv
+lap
+scikit-image
+scikit-learn
+tqdm
+psutil
+py-cpuinfo
+huggingface_hub
+gitpython
+pyserial
+sqlite-utils
+gdown
