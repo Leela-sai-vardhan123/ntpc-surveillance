@@ -3,7 +3,7 @@ NTPC Smart Surveillance System
 Modern SaaS Dashboard — Full Redesign v3
 """
 
-import download_models
+from download_models import *
 import os, time, tempfile
 import cv2, numpy as np
 import pandas as pd
