@@ -1,0 +1,45 @@
+version: "3.9"
+
+# ── AI Smart Traffic Monitor — Docker Compose ─────────────────────────────────
+# Run both dashboard + API together:
+#   docker-compose up
+# GPU support (requires nvidia-docker):
+#   docker-compose --profile gpu up
+
+services:
+
+  dashboard:
+    build: .
+    container_name: traffic-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./models:/app/models          # mount your .pt files
+      - ./logs:/app/logs              # persist violation DB
+      - ./results:/app/results        # persist evidence images
+      - ./assets:/app/assets
+    environment:
+      - PYTHONUNBUFFERED=1
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  api:
+    build: .
+    container_name: traffic-api
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - dashboard
+    restart: unless-stopped

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+
+# Environment
+.env
+venv/
+env/
+.venv/
+
+# Models (large files — store on Drive/Releases)
+models/*.pt
+
+# Data & outputs
+logs/
+results/
+assets/buzzer.wav
+*.mp4
+*.avi
+*.mov
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# YOLO runs
+runs/

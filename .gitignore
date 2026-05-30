@@ -1,0 +1,9 @@
+models/*.pt 
+logs/ 
+results/ 
+assets/ 
+__pycache__/ 
+*.pyc 
+venv/ 
+.env 
+temp/ 
