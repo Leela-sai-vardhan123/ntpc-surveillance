@@ -6,7 +6,7 @@ pandas
 Pillow
 plotly
 requests
-gdown
+gdown==5.2.0
 psutil
 tqdm
 pyyaml
